@@ -21,7 +21,15 @@ for key, value in vehcle.items():
 # define an empty list to hold the car inventory that you will read
 myInventoryList = []
 
+
+try:
+    with open('car_fleet.csv', 'r') as file:
+        print("File opened successfully!")
+except FileNotFoundError:
+    print("File not found.")
+    
 # cory the CSV file into memory
+
 with open('car_fleet.csv') as csvFile:
     csvReader = csv.reader(csvFile, delimiter=',')  
     lineCount = 0  
@@ -31,7 +39,7 @@ with open('car_fleet.csv') as csvFile:
             lineCount += 1  
         else:  
             print(f'vin: {row[0]} make: {row[1]}, model: {row[2]}, year: {row[3]}, range: {row[4]}, topSpeed: {row[5]}, zeroSixty: {row[6]}, mileage: {row[7]}')  
-            currentVehicle = copy.deepcopy(myVehicle)  
+            currentVehicle = copy.deepcopy(vehicle)  
             currentVehicle["vin"] = row[0]  
             currentVehicle["make"] = row[1]  
             currentVehicle["model"] = row[2]  
@@ -44,5 +52,5 @@ with open('car_fleet.csv') as csvFile:
             lineCount += 1  
     print(f'Processed {lineCount} lines.')
 
-    currentVehicle = copy.deepcopy(myVehicle)
-    
+    currentVehicle = copy.deepcopy(vehicle)
+

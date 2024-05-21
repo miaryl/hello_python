@@ -15,7 +15,7 @@ number = random.randint(1,99)
 #Track whether the user guessed your number by creating a variable called guessRight
 guessRight = False
 
-# while loop 
+# while loop until gamer can guess correct number
 while guessRight != True:
     guess = input("Guess a number between 1 and 99: ")
     if int(guess) == number:
