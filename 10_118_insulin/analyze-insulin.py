@@ -1,2 +1,0 @@
-length = len(vcgergffytpktrreaedlqvgqvelgggpgagslqplalegslqkrgiveqcctsicslyqlenycn)
-print(length)
