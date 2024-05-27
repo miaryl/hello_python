@@ -45,3 +45,12 @@ print(volume_cilinder(5,3))
 
 cylinder_vol = lambda rad, h: 3.14 * rad * rad * h
 print(cylinder_vol(5,3))
+
+#what is open()?  -> open a file
+# with open('filename.format', '?(r...)') as file:
+#    content = archivo.read()
+#    print(content)
+
+# with open('file2.txt', 'w') as archivo:
+#     archivo.write("hola mundo")
+
