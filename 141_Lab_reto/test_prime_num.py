@@ -5,3 +5,6 @@ def test_1_false():
 
 def test_2_true():
     assert is_prime(2) == True
+
+def test_primenum():
+    assert is_prime(5) == True
